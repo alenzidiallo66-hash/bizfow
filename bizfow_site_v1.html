@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071426">
+  <meta name="description" content="BIZFOW aide les commerçants à gérer leurs produits, leurs stocks, leurs ventes et leurs clients. Né en Guinée. Conçu pour le monde.">
+  <title>BIZFOW — Born in Guinea. Built for the World.</title>
+  <style>
+    :root{--navy:#071426;--navy2:#0d2038;--gold:#e8b84b;--gold2:#ffd978;--green:#159b58;--red:#df3434;--yellow:#f4c52f;--white:#f8fafc;--muted:#aab7c8;--line:rgba(255,255,255,.12)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--navy);color:var(--white);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(7,20,38,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.04em;font-size:1.35rem}
+    .mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#f9d978,#c58a1c);display:grid;place-items:center;color:#091629;font-weight:1000;font-size:1.35rem;box-shadow:0 5px 20px #e8b84b33}
+    .brand span:last-child{background:linear-gradient(90deg,#fff 0 45%,#f5c54f 65%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    nav{display:flex;gap:26px;color:#d6deea;font-size:.93rem}nav a:hover{color:var(--gold2)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:12px;font-weight:800;background:linear-gradient(135deg,var(--gold2),#d89b2b);color:#101827;border:0;cursor:pointer;box-shadow:0 8px 25px #e8b84b22}
+    .btn.secondary{background:transparent;color:var(--white);border:1px solid var(--line);box-shadow:none}
+    .hero{padding:82px 0 70px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 80% 25%,#153c5a 0,transparent 42%),radial-gradient(ellipse at 15% 80%,#153b31 0,transparent 35%)}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--gold2);font-weight:800;letter-spacing:.13em;text-transform:uppercase;font-size:.75rem}
+    .flag{display:flex;width:25px;height:15px;border-radius:3px;overflow:hidden}.flag i{flex:1}.flag i:nth-child(1){background:var(--red)}.flag i:nth-child(2){background:var(--yellow)}.flag i:nth-child(3){background:var(--green)}
+    h1{font-size:clamp(2.65rem,6vw,5.1rem);line-height:1.03;letter-spacing:-.055em;margin:22px 0}
+    h1 em{font-style:normal;color:var(--gold2)}.lead{font-size:1.12rem;color:#c0ccda;max-width:580px}
+    .actions{display:flex;flex-wrap:wrap;gap:13px;margin:28px 0 22px}.micro{font-size:.82rem;color:var(--muted)}
+    .visual{border:1px solid #e8b84b44;border-radius:28px;padding:28px;background:linear-gradient(145deg,#102b46,#081426 70%);box-shadow:0 30px 80px #0006;position:relative}
+    .visual-logo{display:flex;align-items:center;justify-content:center;min-height:210px;position:relative}
+    .orb{width:190px;height:190px;border-radius:50%;border:1px solid #e8b84b66;display:grid;place-items:center;background:radial-gradient(circle,#e8b84b20,transparent 65%);box-shadow:0 0 70px #e8b84b20}
+    .orb strong{font-size:6rem;line-height:1;color:var(--gold2);text-shadow:0 8px 30px #e8b84b55}
+    .orbit{position:absolute;width:260px;height:95px;border:2px solid #e8b84b88;border-radius:50%;transform:rotate(-25deg)}
+    .visual-caption{text-align:center;color:#d7e1ed;font-size:.9rem}.visual-caption b{color:var(--gold2)}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+    .stat{background:#ffffff08;border:1px solid var(--line);border-radius:14px;padding:13px;text-align:center}.stat b{display:block;color:var(--gold2);font-size:1.1rem}.stat small{color:var(--muted)}
+    section{padding:76px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 38px}.section-head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:12px 0}.section-head p{color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{padding:25px;border-radius:18px;border:1px solid var(--line);background:linear-gradient(145deg,#10243b,#0a192b)}
+    .icon{width:46px;height:46px;border-radius:13px;background:#e8b84b1c;color:var(--gold2);display:grid;place-items:center;font-size:1.35rem;margin-bottom:17px}
+    .card h3{margin:0 0 8px}.card p{margin:0;color:var(--muted);font-size:.94rem}
+    .how{background:#0b1a2d}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{padding:23px;border-left:2px solid var(--gold);background:#ffffff06;border-radius:0 15px 15px 0}.num{color:var(--gold2);font-size:.8rem;font-weight:900;letter-spacing:.1em}
+    .step h3{margin:8px 0}.step p{color:var(--muted);font-size:.93rem;margin:0}
+    .cta{padding:44px;border-radius:24px;border:1px solid #e8b84b55;background:radial-gradient(ellipse at top right,#264b57,#10243a 60%,#0b192b);text-align:center}
+    .cta h2{font-size:clamp(2rem,4vw,3rem);margin:0 0 12px}.cta p{color:#c2cedb;max-width:620px;margin:0 auto 24px}
+    footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:800px){nav{display:none}.hero{padding:60px 0}.hero-grid{grid-template-columns:1fr;gap:34px}.visual{max-width:520px;width:100%;margin:auto}.cards,.steps{grid-template-columns:1fr}.stats{gap:8px}.stat{padding:10px 5px}.cta{padding:32px 20px}}
+    @media(prefers-reduced-motion:no-preference){.visual{animation:rise .8s ease-out both}@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#accueil" aria-label="BIZFOW accueil"><span class="mark">B</span><span>BIZFOW</span></a>
+    <nav aria-label="Navigation principale"><a href="#solutions">Solutions</a><a href="#fonctionnement">Comment ça marche</a><a href="#apropos">Notre vision</a></nav>
+    <a class="btn" href="#contact">Découvrir BIZFOW</a>
+  </div>
+</header>
+<main>
+  <section class="hero" id="accueil">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow"><span class="flag"><i></i><i></i><i></i></span> Une technologie née en Guinée</div>
+        <h1>Faites grandir votre <em>commerce.</em></h1>
+        <p class="lead">BIZFOW ambitionne de réunir vos produits, vos stocks, vos ventes et vos clients dans un outil simple, pensé pour les commerçants africains.</p>
+        <div class="actions"><a class="btn" href="#solutions">Découvrir nos solutions</a><a class="btn secondary" href="#fonctionnement">Voir comment ça marche</a></div>
+        <p class="micro">Born in Guinea. Built for the World.</p>
+      </div>
+      <div class="visual" aria-label="Illustration de la marque BIZFOW">
+        <div class="visual-logo"><div class="orbit"></div><div class="orb"><strong>B</strong></div></div>
+        <div class="visual-caption"><b>BIZFOW</b> · African Business Technology</div>
+        <div class="stats"><div class="stat"><b>Stock</b><small>Suivi simple</small></div><div class="stat"><b>Ventes</b><small>Vue claire</small></div><div class="stat"><b>Clients</b><small>Mieux suivis</small></div></div>
+      </div>
+    </div>
+  </section>
+  <section id="solutions">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Les outils essentiels</div><h2>Votre activité, plus facile à piloter.</h2><p>Une plateforme conçue pour aider les petites entreprises à mieux organiser leur quotidien. Les fonctionnalités seront déployées progressivement.</p></div>
+      <div class="cards">
+        <article class="card"><div class="icon">▦</div><h3>Produits & stocks</h3><p>Centralisez vos articles, vos prix et les quantités disponibles.</p></article>
+        <article class="card"><div class="icon">↗</div><h3>Ventes & commandes</h3><p>Suivez les commandes et gardez une trace de vos ventes.</p></article>
+        <article class="card"><div class="icon">◎</div><h3>Clients</h3><p>Retrouvez les coordonnées et l'historique de vos clients.</p></article>
+        <article class="card"><div class="icon">▤</div><h3>Tableau de bord</h3><p>Visualisez les indicateurs importants de votre commerce.</p></article>
+        <article class="card"><div class="icon">⌂</div><h3>Mini-boutique</h3><p>Préparez une vitrine en ligne à partager avec vos clients.</p></article>
+        <article class="card"><div class="icon">◷</div><h3>Rapports</h3><p>Comprenez vos ventes et estimez vos marges plus facilement.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="how" id="fonctionnement">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Simple et progressif</div><h2>Commencez avec l'essentiel.</h2><p>BIZFOW sera construit autour des besoins réels des commerçants, avec une prise en main pensée pour le mobile.</p></div>
+      <div class="steps">
+        <article class="step"><div class="num">ÉTAPE 01</div><h3>Organisez vos produits</h3><p>Ajoutez vos articles, vos prix et vos quantités dans un espace centralisé.</p></article>
+        <article class="step"><div class="num">ÉTAPE 02</div><h3>Suivez votre activité</h3><p>Enregistrez les ventes et gardez une vue claire sur les commandes.</p></article>
+        <article class="step"><div class="num">ÉTAPE 03</div><h3>Prenez de meilleures décisions</h3><p>Consultez vos indicateurs pour mieux comprendre votre commerce.</p></article>
+      </div>
+    </div>
+  </section>
+  <section id="apropos">
+    <div class="wrap">
+      <div class="cta">
+        <div class="eyebrow">Guinée · Afrique · Monde</div>
+        <h2>Né en Guinée. Conçu pour le monde.</h2>
+        <p>Notre ambition est de créer une technologie utile, accessible et adaptée aux réalités des entrepreneurs africains, avec une vision internationale.</p>
+        <a class="btn" href="#contact">Suivre le lancement</a>
+      </div>
+    </div>
+  </section>
+  <section id="contact" style="padding-top:0">
+    <div class="wrap section-head">
+      <div class="eyebrow">Prochaine étape</div><h2>Construisons BIZFOW ensemble.</h2>
+      <p>Cette première version présente la vision du projet. Les comptes utilisateurs, le tableau de bord réel et les paiements seront ajoutés dans les prochaines étapes.</p>
+      <a class="btn" href="mailto:contact@bizfow.com?subject=Int%C3%A9r%C3%AAt%20pour%20BIZFOW">Nous contacter par e-mail</a>
+      <p class="micro" style="margin-top:14px">Adresse e-mail indicative : à créer et vérifier avant publication.</p>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap foot"><span>© 2026 BIZFOW. Tous droits réservés.</span><span>Born in Guinea. Built for the World.</span></div></footer>
+</body>
+</html>
